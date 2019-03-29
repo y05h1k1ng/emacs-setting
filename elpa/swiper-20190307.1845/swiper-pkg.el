@@ -1,0 +1,1 @@
+(define-package "swiper" "20190307.1845" "Isearch with an overview. Oh, man!" '((emacs "24.1") (ivy "0.11.0")) :commit "6373a48df3049bac9569bc453d1e42e96d8004f8" :keywords '("matching") :authors '(("Oleh Krehel" . "ohwoeowho@gmail.com")) :maintainer '("Oleh Krehel" . "ohwoeowho@gmail.com") :url "https://github.com/abo-abo/swiper")
