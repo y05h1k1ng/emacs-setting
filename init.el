@@ -52,3 +52,18 @@
 ;; swiper 
 (global-set-key "\C-s" 'swiper)
 (defvar swiper-include-line-number-in-search t) ;; line-numberでも検索可能
+
+;; jedi
+(require 'jedi-core)
+(setq jedi:complete-on-dot t)
+(setq jedi:use-shortcuts t)
+(add-hook 'python-mode-hook 'jedi.setup)
+(add-to-list 'company-backends 'company-jedi) ; add backend
+
+;; flycheck
+(require 'flycheck)
+(global-flycheck-mode)
+(define-key global-map (kbd "\C-cn") 'flycheck-next-error)
+(define-key global-map (kbd "\C-cp") 'flycheck-previous-error)
+(define-key global-map (kbd "\C-cd") 'flycheck-list-errors)
+
