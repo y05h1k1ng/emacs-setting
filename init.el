@@ -88,7 +88,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -99,3 +99,23 @@
 ;; js2-mode
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; Goのパスを通す
+(add-to-list 'exec-path (expand-file-name "/home/yoshiking/go/bin"))
+;; go get で入れたツールのパスを通す
+(add-to-list 'exec-path (expand-file-name "/home/yoshiking/go/src/github.com"))
+
+;; flycheck-mode (go version)
+(add-hook 'go-mode-hook 'flycheck-mode)
+(add-hook 'go-mode-hook (lambda()
+			  (add-hook 'before-save-hook' 'gofmt-before-save)
+			  (local-set-key (kbd "M-.") 'godef-jump)
+			  (set (make-local-variable 'company-backends) '(company-go))
+			  (setq indent-tabs-mode nil)
+			  (setq c-basic-offset 4)
+			  (setq tab-width 4)
+			  (company-mode)))
+
+;; company-go
+(require 'company-go)
+(add-hook 'go-mode-hook 'company-mode)
