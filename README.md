@@ -31,6 +31,16 @@ solarized dark mode
 }
 ```
 
+### golang 関連
+goの方のパッケージをインストールしておく
+```
+go get github.com/rogpeppe/godef # 関数定義等の参照パッケージ
+go get -u github.com/nsf/gocode # 補完パッケージ
+go get github.com/golang/lint/golint # flycheckでシンタックスエラーを検知
+go get github.com/kisielk/errcheck # flycheckでシンタックスエラーを検知
+```
+入っているのは、`company-go`, `go-mode`の2つ
+
 ## その他設定
 - 行番号表示
 - 警告音、フラッシュ無効
