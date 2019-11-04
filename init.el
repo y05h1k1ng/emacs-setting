@@ -10,14 +10,20 @@
 (package-initialize)
 
 ;; color theme
-(require 'solarized)
-(deftheme solarized-dark "The dark variant of the Solarized colour theme")
-(create-solarized-theme 'dark 'solarized-dark)
-(provide-theme 'solarized-dark)
+(load-theme 'dracula t)
 
 ;; 行番号
 (require 'linum)
 (global-linum-mode 1)
+
+;; メニューバーを非表示
+(menu-bar-mode 0)
+
+;; ツールバーを非表示
+(tool-bar-mode 0)
+
+;;スクロールバーを非表示
+(scroll-bar-mode 0)
 
 ;; 警告音もフラッシュもすべて無効
 (setq ring-bell-function 'ignore)
@@ -88,7 +94,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
