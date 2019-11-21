@@ -47,6 +47,7 @@
 ;; company-tern
 (require 'company-tern)
 (add-to-list 'company-backends 'company-tern)
+(setq tern-command '("tern" "--no-port-file"))
 (add-hook 'js2-mode-hook (lambda ()
 			   (tern-mode)
 			   (company-mode)))
@@ -101,6 +102,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 
 ;; js2-mode
 (require 'js2-mode)
