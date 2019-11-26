@@ -95,7 +95,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -133,3 +133,7 @@
 
 ;; wgrep
 (require `wgrep nil t)
+
+;; ace-window
+(global-set-key (kbd "M-o") `ace-window)
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
