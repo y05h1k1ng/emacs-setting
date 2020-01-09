@@ -132,7 +132,8 @@
 (global-set-key (kbd "C-x g") `magit-status)
 
 ;; wgrep
-(require `wgrep nil t)
+(require `wgrep)
+(setq wgrep-enable-key "r")
 
 ;; ace-window
 (global-set-key (kbd "M-o") `ace-window)
