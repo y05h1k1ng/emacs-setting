@@ -47,6 +47,26 @@ go get github.com/kisielk/errcheck # flycheckでシンタックスエラーを�
 ```
 入っているのは、`company-go`, `go-mode`の2つ
 
+### magit
+gitつかえるよ
+```
+C-c g 起動
+```
+### wgrep
+なんかわからん
+### ace-window
+画面分割の便利ショートカット
+```
+M-o (a, s, d, f, g...) 画面移動
+M-o m 画面交換
+M-o x 画面削除
+M-o ? ヘルプ
+```
+### rjsx-mode
+`.jsx`を認識させるために入れた
+
+`.js`はすべてこのモードで開かれる
+
 ## その他設定
 - 行番号表示
 - 警告音、フラッシュ無効
