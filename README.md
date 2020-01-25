@@ -36,6 +36,14 @@ jsxファイルの補完諸々
   }
 }
 ```
+### irony
+c++の補完
+
+初回はirony serverをインストールしないと行けないので
+`M-x irony-server-install`する。
+
+多分怒られると思うので、<https://github.com/Sarcasm/irony-mode/issues/167>見て頑張る。
+`~/.emacs.d/irony`とか`/tmp/build-irony-server`とか残ってたら一旦消したほうがよさげ
 
 ### golang 関連
 goの方のパッケージをインストールしておく
