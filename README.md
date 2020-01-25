@@ -37,7 +37,7 @@ jsxファイルの補完諸々
 }
 ```
 ### irony
-c++の補完
+c++のシンタックスチェック
 
 初回はirony serverをインストールしないと行けないので
 `M-x irony-server-install`する。
