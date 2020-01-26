@@ -95,7 +95,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -132,7 +132,7 @@
 (global-set-key (kbd "C-x g") `magit-status)
 
 ;; wgrep
-(require `wgrep)
+(require 'wgrep)
 (setq wgrep-enable-key "r")
 
 ;; ace-window
@@ -143,8 +143,18 @@
 (add-to-list `auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
 
 ;; multiple-cursors
-(require `multiple-cursors)
+(require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; yasnippet
+(require 'yasnippet)
+;; 既存スニペットを挿入する
+(define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
+;; 新規スニペットを作成するバッファを用意する
+(define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
+;; 既存スニペットを閲覧・編集する
+(define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+(yas-global-mode 1)
