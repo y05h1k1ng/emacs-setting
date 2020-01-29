@@ -4,3 +4,6 @@ session*
 tramp
 kkcrc
 recentf
+.mc-lists.el
+elpa/
+transient/
