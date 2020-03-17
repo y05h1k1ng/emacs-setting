@@ -95,7 +95,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -167,3 +167,8 @@
 ;; nyan-mode
 (require 'nyan-mode)
 (nyan-mode 1)
+
+;; all-the-icons
+(require 'all-the-icons)
+(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+(add-hook 'after-init-hook 'all-the-icons-ivy-setup)

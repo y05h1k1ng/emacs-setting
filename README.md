@@ -94,6 +94,11 @@ M-x yas-describe-tables 一覧表示
 ### nyan-mode
 nyan-catがおおよその位置を表示してくれる**神**機能
 
+### all-the-icons
+`dired` と `ivy`に適応させているつもりだが、`ivy`の方はうまく行かない
+
+はじめは、`M-x all-the-icons-iinstall-fonts`でfontのインストールをしてから、ターミナル上で`fc-cache -f -v`でインストール
+
 ## その他設定
 - 行番号表示
 - 警告音、フラッシュ無効
