@@ -91,6 +91,9 @@ C-c C-l ロード
 M-x yas-describe-tables 一覧表示
 ```
 
+### nyan-mode
+nyan-catがおおよその位置を表示してくれる**神**機能
+
 ## その他設定
 - 行番号表示
 - 警告音、フラッシュ無効
