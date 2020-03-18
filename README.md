@@ -95,9 +95,12 @@ M-x yas-describe-tables 一覧表示
 nyan-catがおおよその位置を表示してくれる**神**機能
 
 ### all-the-icons
-`dired` と `ivy`に適応させているつもりだが、`ivy`の方はうまく行かない
+`dired` と `ivy`に適応させている
 
-はじめは、`M-x all-the-icons-iinstall-fonts`でfontのインストールをしてから、ターミナル上で`fc-cache -f -v`でインストール
+はじめは、`M-x all-the-icons-install-fonts`でfontのインストールをしてから、ターミナル上で`fc-cache -f -v`でインストール
+
+### spaceline
+下のバーがかっこよくなる。ここでもall-the-iconsを使用
 
 ## その他設定
 - 行番号表示
