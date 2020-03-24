@@ -174,8 +174,8 @@
 (add-hook 'after-init-hook 'all-the-icons-ivy-setup)
 
 ;; spaceline
-(require 'spaceline-config)
-(spaceline-all-the-icons-theme)
+;; (require 'spaceline-config)
+;; (spaceline-all-the-icons-theme)
 
 ;; projectile
 (projectile-mode +1)

@@ -100,7 +100,14 @@ nyan-catがおおよその位置を表示してくれる**神**機能
 はじめは、`M-x all-the-icons-install-fonts`でfontのインストールをしてから、ターミナル上で`fc-cache -f -v`でインストール
 
 ### spaceline
-下のバーがかっこよくなる。ここでもall-the-iconsを使用
+下のバーがかっこよくなる。ここでもall-the-iconsを使用(重すぎて使ってない)
+
+### projectile
+projectごとのファイル移動が楽になる
+```
+M-s p f プロフェクト内のファイル検索
+M-s p p プロジェクトの移動
+```
 
 ## その他設定
 - 行番号表示
