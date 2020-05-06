@@ -121,6 +121,18 @@ C-n 下
 d diffの表示
 ```
 
+### markdown mode
+ここのquick referenceよく書かれているから見て
+
+https://leanpub.com/markdown-mode/read#leanpub-auto-quick-reference
+
+
+previewにはpandocを使うようにした
+
+```
+C-c C-c p preview in browser (md -> htmlから/tmp/にhtmlを置く)
+```
+`(setq markdown-command "pandoc")`に引数渡したいけど, `hogehoge is not found`になるのどうにかして
 
 ## その他設定
 - 行番号表示

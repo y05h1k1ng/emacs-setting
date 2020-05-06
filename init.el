@@ -95,7 +95,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (markdown-mode undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -186,3 +186,8 @@
 (require 'undo-tree)
 (global-undo-tree-mode t)
 (global-set-key (kbd "M-/") 'undo-tree-redo)
+
+;; markdown-mode
+(require 'markdown-mode)
+(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
+(setq markdown-command "pandoc")
