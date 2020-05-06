@@ -134,6 +134,9 @@ C-c C-c p preview in browser (md -> htmlから/tmp/にhtmlを置く)
 ```
 `(setq markdown-command "pandoc")`に引数渡したいけど, `hogehoge is not found`になるのどうにかして
 
+### rainbow-delimiters
+括弧に色をつける
+
 ## その他設定
 - 行番号表示
 - 警告音、フラッシュ無効
