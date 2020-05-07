@@ -95,7 +95,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (rainbow-delimiters markdown-mode undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (web-mode rainbow-delimiters markdown-mode undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -105,8 +105,8 @@
 
 
 ;; js2-mode
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;;(require 'js2-mode)
+;;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; Goのパスを通す
 (add-to-list 'exec-path (expand-file-name "/home/yoshiking/go/bin"))
@@ -140,13 +140,13 @@
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 
 ;; rjsx-mode
-(add-to-list `auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
-(add-hook 'rjsx-mode-hook
-	  (lambda ()
-	    (setq indent-tabs-mode nil) ;; インデントはタブではなく空白
-	    (setq js-indent-level 2) ;; default 4 -> 2
-	    ))
-
+;;(add-to-list `auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
+;;(add-hook 'rjsx-mode-hook
+;;	  (lambda ()
+;;	    (setq indent-tabs-mode nil) ;; インデントはタブではなく空白
+;;	    (setq js-indent-level 2) ;; default 4 -> 2
+;;	    ))
+;;
 ;; multiple-cursors
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -195,8 +195,6 @@
 ;; rainbow-delimiters
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
-;; 括弧の色を強調する設定
 (require 'cl-lib)
 (require 'color)
 (defun rainbow-delimiters-using-stronger-colors ()
@@ -207,3 +205,14 @@
    (let ((face (intern (format "rainbow-delimiters-depth-%d-face" index))))
     (cl-callf color-saturate-name (face-foreground face) 30))))
 (add-hook 'emacs-startup-hook 'rainbow-delimiters-using-stronger-colors)
+
+;; web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))

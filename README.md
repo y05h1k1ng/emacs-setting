@@ -20,6 +20,9 @@ dracula-theme
 jsxファイルの補完諸々
 
 .jsファイルは全てrjsx-modeになる（reactさわるときは便利？？）。
+
+**web-modeがやってくれるのでコメントアウト**
+
 ### tern(company-tern) javascriptの関数補完
 はじめにnodeを入れる必要がある。
 
@@ -74,6 +77,8 @@ M-o ? ヘルプ
 `.jsx`を認識させるために入れた
 
 `.js`はすべてこのモードで開かれる
+
+**web-modeがやってくれるのでコメントアウト**
 
 ### multiple-cursors
 - `C->`で次の行にカーソル追加
@@ -136,6 +141,9 @@ C-c C-c p preview in browser (md -> htmlから/tmp/にhtmlを置く)
 
 ### rainbow-delimiters
 括弧に色をつける
+
+### web-mode
+html, js, php諸々見やすくしてくれる
 
 ## その他設定
 - 行番号表示
