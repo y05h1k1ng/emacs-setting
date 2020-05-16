@@ -33,6 +33,9 @@
 ;;; .#* とかのバックアップファイルを作らない
 (setq auto-save-default nil)
 
+;; org-mode
+(setq org-startup-folded nil)
+
 ;; company mode 自動補完
 (require 'company)
 (global-company-mode)
