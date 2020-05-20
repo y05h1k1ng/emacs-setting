@@ -98,7 +98,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (web-mode rainbow-delimiters markdown-mode undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (auto-complete-sage sage-shell-mode web-mode rainbow-delimiters markdown-mode undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -219,3 +219,13 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;; sagemath
+(setq sage-shell:use-prompt-toolkit nil)
+(add-hook 'sage-shell:sage-mode-hook 'ac-sage-setup)
+(add-hook 'sage-shell-mode-hook 'ac-sage-setup)
+(eval-after-load "auto-complete-sage"
+  '(setq sage-shell:completion-function 'completion-at-point))
+(defun jpk/sage-mode-hook ()
+  (company-mode -1))
+(add-hook 'sage-shell-mode-hook 'jpk/sage-mode-hook)

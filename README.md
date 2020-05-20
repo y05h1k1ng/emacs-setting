@@ -145,6 +145,11 @@ C-c C-c p preview in browser (md -> htmlから/tmp/にhtmlを置く)
 ### web-mode
 html, js, php諸々見やすくしてくれる
 
+### sage-shell-mode
+sagemath用
+
+companyがサポートされてなくてauto-completeが動くようにしたが、`.sage`のときにcompanyをoffにできない
+
 ## その他設定
 - 行番号表示
 - 警告音、フラッシュ無効
