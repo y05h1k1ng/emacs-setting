@@ -10,3 +10,5 @@ transient/
 projectile-bookmarks.eld
 irony/
 ac-comphist.dat
+eshell/
+.tern-config
