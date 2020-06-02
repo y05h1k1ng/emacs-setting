@@ -1,3 +1,8 @@
+;;; init.el --- Initialization file for Emacs
+;;; Commentary:
+;;; Emacs Startup File --- initialization for Emacs
+
+;;; Code:
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
@@ -60,6 +65,10 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 
+;; ivy-rich
+(require 'ivy-rich)
+(ivy-rich-mode 1)
+
 ;; counsel setting
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file) ;; find-fileもcounsel任せ！
@@ -98,7 +107,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (auto-complete-sage sage-shell-mode web-mode rainbow-delimiters markdown-mode undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
+    (ivy-rich auto-complete-sage sage-shell-mode web-mode rainbow-delimiters markdown-mode undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -136,7 +145,9 @@
 
 ;; wgrep
 (require 'wgrep)
-(setq wgrep-enable-key "r")
+(setf wgrep-enable-key "e")
+(setq wgrep-auto-save-buffer t)
+(setq wgrep-change-readonly-file t)
 
 ;; ace-window
 (global-set-key (kbd "M-o") `ace-window)
@@ -260,3 +271,5 @@
 	      ("~/Dropbox/emacs/org/remember.org" :level . 1)
 	      ("~/Dropbox/emacs/org/memo.org" :level . 1)
 	      ("~/Dropbox/emacs/org/task.org" :level . 1))))
+
+;;; init.el ends here
