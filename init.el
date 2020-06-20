@@ -38,6 +38,9 @@
 ;;; .#* とかのバックアップファイルを作らない
 (setq auto-save-default nil)
 
+;; dismiss startup screen
+(setq inhibit-startup-screen t)
+
 ;; org-mode
 (setq org-startup-folded nil)
 
@@ -53,12 +56,12 @@
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-active-map (kbd "C-h") nil)
 ;; company-tern
-(require 'company-tern)
-(add-to-list 'company-backends 'company-tern)
-(setq tern-command '("tern" "--no-port-file"))
-(add-hook 'js2-mode-hook (lambda ()
-			   (tern-mode)
-			   (company-mode)))
+;;(require 'company-tern)
+;;(add-to-list 'company-backends 'company-tern)
+;;(setq tern-command '("tern" "--no-port-file"))
+;;(add-hook 'js2-mode-hook (lambda ()
+;;			   (tern-mode)
+;;			   (company-mode)))
 
 ;; ivy setting
 (require 'ivy)
