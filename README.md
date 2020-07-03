@@ -1,45 +1,45 @@
 # emacs-setting
-- [Color-Theme](##Color Theme)
-- [Miscs](##Miscs)
-- [Packages](##Packages)
-    - [特定の言語に限らない、便利Packages](###特定の言語に限らない、便利Packages)
-	    - [company:★★★★★](####company ★★★★★)
-		- [ivy:★★★★★](####ivy ★★★★★)
-		- [counsel:★★★★★](####counsel ★★★★★)
-		- [swiper:★★★★★](####swiper ★★★★★)
-		- [flycheck:★★★★★](####flycheck ★★★★★)
-		- [ace-window:★★★★★](####ace-window ★★★★★)
-		- [magit:★★★★☆](####magit ★★★★☆)
-		- [wgrep:★★★☆☆](####wgrep ★★★☆☆)
-		- [multiple-cursors:★★★★☆](####multiple-cursors ★★★★☆)
-		- [yasnippet:★★★☆☆](####yasnippet ★★★☆☆)
-		- [rainbow-delimiters:★★★☆☆](####rainbow-delimiters ★★★☆☆)
-		- [nyan-mode:★★★★★(☆☆☆☆☆)](####nyan-mode ★★★★★(☆☆☆☆☆))
-		- [all-the-icons:★★★☆☆](####all-the-icons ★★★☆☆)
-		- [projectile:★★★☆☆](####projectile ★★★☆☆)
-		- [redo-tree:★★★★★](####redo-tree ★★★★★)
-		- [emoji-cheat-sheet-plus:★★★☆☆](####emoji-cheat-sheet-plus ★★★☆☆)
-	- [python](###python)
-	    - [jedi](####jedi)
-		- [company-jedi](####company-jedi)
-	- [sagemath](###sagemath)
-	    - [sage-shell-mode](####sage-shell-mode)
-	- [html,js,css等](###html, js, css等)
-	    - [web-mode](####web-mode)
-	- [C++](###C++)
-	    - [irony](####irony)
-	- [golang](###golang)
-		- [company-go](####company-go)
-		- [go-mode](####go-mode)
-	- [org](###org)
-	    - [org mode](####org mode)
-	- [markdown](###markdown)
-	    - [markdown mode](####markdown mode)
-- [過去に使ってた](##過去に使ってた)
-    - [spaceline](###spaceline)
-	- [js系](###js系)
-	    - [rjsx-mode](####rjsx-mode)
-		- [tern(company-tern)](####tern(company-tern))
+- [Color-Theme](#Color-Theme)
+- [Miscs](#Miscs)
+- [Packages](#Packages)
+    - [特定の言語に限らない、便利Packages](#特定の言語に限らない、便利Packages)
+	    - [company:★★★★★](#company:★★★★★)
+		- [ivy:★★★★★](#ivy:★★★★★)
+		- [counsel:★★★★★](#counsel:★★★★★)
+		- [swiper:★★★★★](#swiper:★★★★★)
+		- [flycheck:★★★★★](#flycheck:★★★★★)
+		- [ace-window:★★★★★](#ace-window:★★★★★)
+		- [magit:★★★★☆](#magit:★★★★☆)
+		- [wgrep:★★★☆☆](#wgrep:★★★☆☆)
+		- [multiple-cursors:★★★★☆](#multiple-cursors:★★★★☆)
+		- [yasnippet:★★★☆☆](#yasnippet:★★★☆☆)
+		- [rainbow-delimiters:★★★☆☆](#rainbow-delimiters:★★★☆☆)
+		- [nyan-mode:★★★★★(☆☆☆☆☆)](#nyan-mode:★★★★★(☆☆☆☆☆))
+		- [all-the-icons:★★★☆☆](#all-the-icons:★★★☆☆)
+		- [projectile:★★★☆☆](#projectile:★★★☆☆)
+		- [redo-tree:★★★★★](#redo-tree:★★★★★)
+		- [emoji-cheat-sheet-plus:★★★☆☆](#emoji-cheat-sheet-plus:★★★☆☆)
+	- [python](#python)
+	    - [jedi](#jedi)
+		- [company-jedi](#company-jedi)
+	- [sagemath](#sagemath)
+	    - [sage-shell-mode](#sage-shell-mode)
+	- [html,js,css等](#html,js,css等)
+	    - [web-mode](#web-mode)
+	- [C++](#C++)
+	    - [irony](#irony)
+	- [golang](#golang)
+		- [company-go](#company-go)
+		- [go-mode](#go-mode)
+	- [org](#org)
+	    - [org-mode](#org-mode)
+	- [markdown](#markdown)
+	    - [markdown-mode](#markdown-mode)
+- [過去に使ってた](#過去に使ってた)
+    - [spaceline](#spaceline)
+	- [js系](#js系)
+	    - [rjsx-mode](#rjsx-mode)
+		- [tern(company-tern)](#tern(company-tern))
 
 ## Color Theme
 dracula-theme
@@ -53,21 +53,21 @@ dracula-theme
 
 ## Packages
 ### 特定の言語に限らない、便利Packages
-#### company ★★★★★
+#### company:★★★★★
 - 自動補完
 - 以前に入力した文字を覚えておいてくれる
 
-#### ivy ★★★★★
+#### ivy:★★★★★
 - Switch Bufferとか？で助けてくれてるっぽい
 
-#### counsel ★★★★★
+#### counsel:★★★★★
 - emacs上でのファイル移動強化
 
-#### swiper ★★★★★
+#### swiper:★★★★★
 - 検索強化
 - `C-s`が使いやすくなるのは、swiperのおかげ
 
-#### flycheck ★★★★★
+#### flycheck:★★★★★
 - シンタックスチェック
 - どのファイルをチェックしてくれてるかわかんない
 
@@ -77,7 +77,7 @@ C-c p: 前のエラー
 C-c d: エラーのリスト表示
 ```
 
-#### ace-window ★★★★★
+#### ace-window:★★★★★
 - 画面分割の移動補助
 - `M-o`を割り当て
 - 画面が2つだけのときは、`M-o`で画面移動のみ（削除とかはデフォルトの使ってネ）
@@ -89,12 +89,12 @@ M-o m []: 移動
 M-o ?: ヘルプ
 ```
 
-#### magit ★★★★☆
+#### magit:★★★★☆
 - git使う
 - diff見やすいのが嬉しい
 - `C-x g`を割り当て
 
-#### wgrep ★★★☆☆
+#### wgrep:★★★☆☆
 - grepで引っかかった単語等を一括編集できる
 - multiple-cursorsでは一画面でしか一括で選択できないが、一つのファイルに限らずディレクトリ内に当てはまる単語を編集したいときに便利
 - M-x grepでgrep実行（コマンド: `grep -nH --null [options] <string> <file>`）
@@ -103,7 +103,7 @@ M-o ?: ヘルプ
 - `C-c C-c` `C-c C-s`で保存
 - `C-c C-k`で破棄
 
-#### multiple-cursors ★★★★☆
+#### multiple-cursors:★★★★☆
 - 複数カーソル
 
 ```
@@ -113,7 +113,7 @@ C-C C-C: 選択範囲の行にカーソル一括追加
 C-c C-<: 画面内の選択単語にカーソル一括追加
 ```
 
-#### yasnippet ★★★☆☆
+#### yasnippet:★★★☆☆
 - snippet管理
 - 使用用途はC++(競プロ)かpython, sagemath(CTF)
 - キーバインド割り当て
@@ -128,19 +128,19 @@ C-c C-c スニペット保存
 C-c C-l ロード
 ```
 
-#### rainbow-delimiters ★★★☆☆
+#### rainbow-delimiters:★★★☆☆
 - 括弧に色をつける
 - jsonとか見やすくなって便利
 
-#### nyan-mode ★★★★★(☆☆☆☆☆)
+#### nyan-mode:★★★★★(☆☆☆☆☆)
 - nyan-catが下のバーでおおよその位置を表示してくれる神機能:heart_eyes_cat:
 - （あってもなくても...まあ少しだけテンションが上がるかな）
 
-#### all-the-icons ★★★☆☆
+#### all-the-icons:★★★☆☆
 - `dired` と `ivy`に適応させている
 - はじめは、`M-x all-the-icons-install-fonts`でfontのインストールをしてから、ターミナル上で`fc-cache -f -v`でインストール
 
-#### projectile ★★★☆☆
+#### projectile:★★★☆☆
 - projectごとのファイル移動が楽になる
 - gitとか決められたファイル構造のディレクトリしかprojectとして認識してくれない
     - 任意のディレクトリも覚えてくれたらいいのに....:cry:
@@ -149,7 +149,7 @@ M-s p f: プロフェクト内のファイル検索
 M-s p p: プロジェクトの移動
 ```
 
-#### redo-tree ★★★★★
+#### redo-tree:★★★★★
 - redoができるようになる
 ```
 M-/: redo
@@ -161,7 +161,7 @@ C-n: 下
 d: diffの表示
 ```
 
-#### emoji-cheat-sheet-plus ★★★☆☆
+#### emoji-cheat-sheet-plus:★★★☆☆
 - MELPAにないので、ここからcloneする(https://github.com/syl20bnr/emacs-emoji-cheat-sheet-plus)
 - helmも入ったぽい（というか、内部で使うからインストールする:innocent:）
 - `C-c C-e`でinsert (org内ではexportのキーバインドと同じでつかないので、`M-x emoji-cheat-sheet-plus-insert`する)
@@ -180,7 +180,7 @@ d: diffの表示
 #### sage-shell-mode
 - companyがサポートされてなくてauto-completeが動くようにしたが、`.sage`のときにcompanyをoffにできない
 
-### html, js, css等
+### html,js,css等
 #### web-mode
 - html, js諸々見やすくしてくれる
 - タグの補完便利
@@ -211,7 +211,7 @@ go get github.com/kisielk/errcheck # flycheckでシンタックスエラーを�
 ### org
 - emacsといえばのコレ
 - デフォルトでも使えるが、いろいろカスタマイズ(Dropboxとか)したかったら:point_down:を入れる
-#### org mode
+#### org-mode
 - パッケージ追加しとく`(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))`
 - `M-x install RET org`
     - buildでコケるけど、うまく動く
@@ -233,7 +233,7 @@ C-c C-k: 削除
 ```
 
 ### markdown
-#### markdown mode
+#### markdown-mode
 - ここのquick referenceよく書かれているから見て(https://leanpub.com/markdown-mode/read#leanpub-auto-quick-reference)
 - pandocのインストールが必要(`sudo apt install pandoc`)
 - previewにはpandocを使うようにした
