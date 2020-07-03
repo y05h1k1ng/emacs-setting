@@ -1,4 +1,45 @@
 # emacs-setting
+- [Color Theme](##Color Theme)
+- [Miscs](##Miscs)
+- [Packages](##Packages)
+    - [特定の言語に限らない、便利Packages](###特定の言語に限らない、便利Packages)
+	    - [company ★★★★★](####company ★★★★★)
+		- [ivy ★★★★★](####ivy ★★★★★)
+		- [counsel ★★★★★](####counsel ★★★★★)
+		- [swiper ★★★★★](####swiper ★★★★★)
+		- [flycheck ★★★★★](####flycheck ★★★★★)
+		- [ace-window ★★★★★](####ace-window ★★★★★)
+		- [magit ★★★★☆](####magit ★★★★☆)
+		- [wgrep ★★★☆☆](####wgrep ★★★☆☆)
+		- [multiple-cursors ★★★★☆](####multiple-cursors ★★★★☆)
+		- [yasnippet ★★★☆☆](####yasnippet ★★★☆☆)
+		- [rainbow-delimiters ★★★☆☆](####rainbow-delimiters ★★★☆☆)
+		- [nyan-mode ★★★★★(☆☆☆☆☆)](####nyan-mode ★★★★★(☆☆☆☆☆))
+		- [all-the-icons ★★★☆☆](####all-the-icons ★★★☆☆)
+		- [projectile ★★★☆☆](####projectile ★★★☆☆)
+		- [redo-tree ★★★★★](####redo-tree ★★★★★)
+		- [emoji-cheat-sheet-plus ★★★☆☆](####emoji-cheat-sheet-plus ★★★☆☆)
+	- [python](###python)
+	    - [jedi](####jedi)
+		- [company-jedi](####company-jedi)
+	- [sagemath](###sagemath)
+	    - [sage-shell-mode](####sage-shell-mode)
+	- [html, js, css等](###html, js, css等)
+	    - [web-mode](####web-mode)
+	- [C++](###C++)
+	    - [irony](####irony)
+	- [golang](###golang)
+		- [company-go](####company-go)
+		- [go-mode](####go-mode)
+	- [org](###org)
+	    - [org mode](####org mode)
+	- [markdown](###markdown)
+	    - [markdown mode](####markdown mode)
+- [過去に使ってた](##過去に使ってた)
+    - [spaceline](###spaceline)
+	- [js系](###js系)
+	    - [rjsx-mode](####rjsx-mode)
+		- [tern(company-tern)](####tern(company-tern))
 
 ## Color Theme
 dracula-theme
@@ -204,7 +245,7 @@ C-c C-c p: preview in browser (md -> htmlから/tmp/にhtmlを置く)
 ## 過去に使ってた
 ### spaceline
 - 下のバーがかっこよくなる。ここでもall-the-iconsを使用
-- 重すぎて使ってない
+- ゲロおも:shit:
 
 ### js系
 バイトでバリバリ使ってたけど`web-mode`に落ち着いてしまった
@@ -213,7 +254,8 @@ C-c C-c p: preview in browser (md -> htmlから/tmp/にhtmlを置く)
 - jsxファイルの補完諸々
 - .jsファイルは全てrjsx-modeになる（reactさわるときは便利？？）
 
-#### tern(company-tern) javascriptの関数補完
+#### tern(company-tern)
+- javascriptの関数補完
 - はじめにnodeを入れる必要がある
 - `npm install -g tern`でternをインストールする。
 - homeディレクトリに.tern-configを作る。内容は以下
