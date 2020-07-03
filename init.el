@@ -281,6 +281,5 @@
 (global-set-key (kbd "C-c C-e") 'emoji-cheat-sheet-plus-insert)
 (add-hook 'org-mode-hook 'emoji-cheat-sheet-plus-display-mode)
 (add-hook 'markdown-mode-hook 'emoji-cheat-sheet-plus-display-mode)
-(add-hook 'magit-log-mode-hook 'emoji-cheat-sheet-plus-display-mode)
-
+(add-hook 'magit-mode-hook 'emoji-cheat-sheet-plus-display-mode)
 ;;; init.el ends here

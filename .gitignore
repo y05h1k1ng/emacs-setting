@@ -14,3 +14,4 @@ eshell/
 .tern-config
 bookmarks
 emacs-emoji-cheat-sheet-plus/
+flycheck-init.el
