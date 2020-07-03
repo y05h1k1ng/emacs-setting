@@ -275,4 +275,12 @@
 	      ("~/Dropbox/emacs/org/memo.org" :level . 1)
 	      ("~/Dropbox/emacs/org/task.org" :level . 1))))
 
+;; emacs-emoji-cheat-sheet-plus
+(add-to-list 'load-path "./emacs-emoji-cheat-sheet-plus/")
+(require 'emoji-cheat-sheet-plus)
+(global-set-key (kbd "C-c C-e") 'emoji-cheat-sheet-plus-insert)
+(add-hook 'org-mode-hook 'emoji-cheat-sheet-plus-display-mode)
+(add-hook 'markdown-mode-hook 'emoji-cheat-sheet-plus-display-mode)
+(add-hook 'magit-log-mode-hook 'emoji-cheat-sheet-plus-display-mode)
+
 ;;; init.el ends here
