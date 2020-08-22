@@ -4,9 +4,11 @@
 
 ;;; Code:
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(setq package-archives
+      '(("melpa" . "https://melpa.org/packages/")
+        ;; ("melpa-stable" . "https://stable.melpa.org/packages/")
+        ("org" . "https://orgmode.org/elpa/")
+        ("gnu" . "https://elpa.gnu.org/packages/")))
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -276,7 +278,6 @@
 	      ("~/Dropbox/emacs/org/task.org" :level . 1))))
 
 ;; emacs-emoji-cheat-sheet-plus
-(add-to-list 'load-path "~/.emacs.d/emacs-emoji-cheat-sheet-plus/")
 (require 'emoji-cheat-sheet-plus)
 (global-set-key (kbd "C-c C-e") 'emoji-cheat-sheet-plus-insert)
 (add-hook 'org-mode-hook 'emoji-cheat-sheet-plus-display-mode)

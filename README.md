@@ -162,8 +162,6 @@ d: diffの表示
 ```
 
 #### emoji-cheat-sheet-plus:★★★☆☆
-- MELPAにないので、ここからcloneする(https://github.com/syl20bnr/emacs-emoji-cheat-sheet-plus)
-- helmも入ったぽい（というか、内部で使うからインストールする:innocent:）
 - `C-c C-e`でinsert (org内ではexportのキーバインドと同じでつかないので、`M-x emoji-cheat-sheet-plus-insert`する)
 - フォントのインストールする `sudo apt install fonts-symbola`
 - org, markdown, magit 以外でも表示させたかったら、display-modeをhookする
