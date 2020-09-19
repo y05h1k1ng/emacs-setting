@@ -19,6 +19,8 @@
 		- [projectile:★★★☆☆](#projectile:★★★☆☆)
 		- [redo-tree:★★★★★](#redo-tree:★★★★★)
 		- [emoji-cheat-sheet-plus:★★★☆☆](#emoji-cheat-sheet-plus:★★★☆☆)
+    - [コード補完]
+	    - [eglot]
 	- [python](#python)
 	    - [jedi](#jedi)
 		- [company-jedi](#company-jedi)
@@ -29,7 +31,6 @@
 	- [C++](#C++)
 	    - [irony](#irony)
 	- [golang](#golang)
-		- [company-go](#company-go)
 		- [go-mode](#go-mode)
 	- [org](#org)
 	    - [org-mode](#org-mode)
@@ -40,6 +41,8 @@
 	- [js系](#js系)
 	    - [rjsx-mode](#rjsx-mode)
 		- [tern(company-tern)](#tern(company-tern))
+	- [golang]
+	    - [company-go]
 
 ## Color Theme
 dracula-theme
@@ -166,6 +169,14 @@ d: diffの表示
 - フォントのインストールする `sudo apt install fonts-symbola`
 - org, markdown, magit 以外でも表示させたかったら、display-modeをhookする
 
+### コード補完
+#### eglot
+- LSP client
+- 他には`lsp-mode`があるが、リッチなものより軽量なこちらを入れた
+- LSPについてはこれがわかりやすい<https://qiita.com/Ladicle/items/e666e3fb9fae9d807969>
+- 今は`gomode`だけにhookしてる
+- 結構良さげなので、暇があればpythonとか他の言語も試してみたい
+
 ### python
 #### jedi
 - 初期起動時に`M-x jedi:install-server`で利用可能（install-serverにはpyenvが必要なので、インストールしていない場合は`pip install virtualenv`でインストールする）
@@ -197,14 +208,14 @@ d: diffの表示
 goの方のパッケージをインストールしておく
 ```
 go get github.com/rogpeppe/godef # 関数定義等の参照パッケージ
-go get -u github.com/nsf/gocode # 補完パッケージ
 go get github.com/golang/lint/golint # flycheckでシンタックスエラーを検知
 go get github.com/kisielk/errcheck # flycheckでシンタックスエラーを検知
 ```
-#### company-go
-- TODO
 #### go-mode
-- TODO
+- 入れる
+#### LSP周り
+- Language ServerはGo Teamが開発しているgopls<https://github.com/golang/tools/tree/master/gopls>
+- これgo getしてinit.elにhook書けば、完成（便利!!!
 
 ### org
 - emacsといえばのコレ
@@ -268,3 +279,6 @@ C-c C-c p: preview in browser (md -> htmlから/tmp/にhtmlを置く)
   }
 }
 ```
+### golang
+#### company-go
+- godef周りでエラーが出て簡単に解決できなさそうなのでLSPに乗り換え
