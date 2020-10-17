@@ -300,4 +300,10 @@
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
+;; javascript indent
+(add-hook 'js-mode-hook
+	  (lambda ()
+	    (make-local-variable 'js-indent-level)
+	    (setq js-indent-level 2)))
+
 ;;; init.el ends here
