@@ -45,7 +45,7 @@
 	    - [company-go]
 
 ## Color Theme
-dracula-theme
+sanityinc-tomorrow-blue
 
 ## Miscs
 - 行番号表示
