@@ -216,6 +216,7 @@ go get github.com/kisielk/errcheck # flycheckでシンタックスエラーを�
 #### LSP周り
 - Language ServerはGo Teamが開発しているgopls<https://github.com/golang/tools/tree/master/gopls>
 - これgo getしてinit.elにhook書けば、完成（便利!!!
+- LaTeXも追加
 
 ### org
 - emacsといえばのコレ
