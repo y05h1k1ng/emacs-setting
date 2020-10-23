@@ -312,4 +312,15 @@
   (add-hook 'tex-mode-hook 'lsp)
   (add-hook 'latex-mode-hook 'lsp))
 
+;; org-mode local TODO lists
+(add-hook 'org-mode-hook 'my-org-mode-stuff)
+(defun my-org-mode-stuff ()
+  (local-set-key (kbd "<f12>")
+		 (lambda ()
+		   (interactive)
+		   (push ?t unread-command-events)
+		   (push ?< unread-command-events)
+		   (call-interactively 'org-agenda)))
+  )
+
 ;;; init.el ends here

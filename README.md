@@ -227,6 +227,7 @@ go get github.com/kisielk/errcheck # flycheckでシンタックスエラーを�
     - buildでコケるけど、うまく動く
 - memo取るのにめちゃくちゃ便利（Dropboxで自動同期）
 - 設定はコレ見て(https://solist.work/blog/posts/information-organizize-method/)
+- `F12`でlocal TODO listsの表示 (https://www.emacswiki.org/emacs/Comments_on_OrgMode)
 
 ```
 C-c c: org-select表示
