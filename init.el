@@ -42,7 +42,10 @@
 (setq inhibit-startup-screen t)
 
 ;; org-mode
-(setq org-startup-folded nil)
+(setq-default org-startup-folded nil)
+
+;; tab -> space
+(setq-default indent-tabs-mode nil)
 
 ;; company mode 自動補完
 (require 'company)
