@@ -33,10 +33,15 @@
 ;; 警告音もフラッシュもすべて無効
 (setq ring-bell-function 'ignore)
 
-;;; *.~ とかのバックアップファイルを作らない
-(setq make-backup-files nil)
-;;; .#* とかのバックアップファイルを作らない
-(setq auto-save-default nil)
+;;; バックアップファイル(*.~)
+(setq backup-directory-alist '((".*" . "~/.backup_emacs"))) ;; ~/.backup_emacs 以下に配置
+(setq version-control t) ;; 複数保存
+(setq kept-new-versions 5) ;; 最新の保持数
+(setq kept-old-versions 1) ;; 最古の保持数
+(setq delete-old-versions t) ;; 範囲外削除
+
+;;; lock file(.#*) は作成しない
+(setq create-lockfiles nil)
 
 ;; dismiss startup screen
 (setq inhibit-startup-screen t)
