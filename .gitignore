@@ -3,7 +3,7 @@ auto-save-list/
 session*
 tramp
 kkcrc
-recentf
+recentf*
 .mc-lists.el
 elpa/
 transient/
