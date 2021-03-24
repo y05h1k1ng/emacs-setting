@@ -66,23 +66,33 @@
 ;;			   (tern-mode)
 ;;			   (company-mode)))
 
-;; ivy setting
+;; ivy
 (require 'ivy)
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-
 ;; ivy-rich
 (require 'ivy-rich)
 (ivy-rich-mode 1)
-
-;; counsel setting
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file) ;; find-fileもcounsel任せ！
-(defvar counsel-find-file-ignore-regexp (regexp-opt '("./" "../")))
-
-;; swiper
+;; ivy + swiper + counsel
+(ivy-mode)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+;; enable this if you want `swiper' to use it
+(setq search-default-mode #'char-fold-to-regexp)
 (global-set-key "\C-s" 'swiper)
-(defvar swiper-include-line-number-in-search t) ;; line-numberでも検索可能
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "C-c i f") 'counsel-describe-function)
+(global-set-key (kbd "C-c i v") 'counsel-describe-variable)
+(global-set-key (kbd "C-c i o") 'counsel-describe-symbol)
+(global-set-key (kbd "C-c i l") 'counsel-find-library)
+(global-set-key (kbd "C-c i i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "C-c i u") 'counsel-unicode-char)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
 ;; jedi
 (require 'jedi-core)
