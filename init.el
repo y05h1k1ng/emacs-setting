@@ -55,7 +55,7 @@
 ;; company mode 自動補完
 (require 'company)
 (global-company-mode)
-(setq company-idle-delay 0)    ;たぶん表示するまでの時間(defult:0.5)
+(setq company-idle-delay 0)
 (setq company-minimum-prefix-length 2)
 (setq company-selection-wrap-around t)
 (define-key company-active-map (kbd "M-n") nil)
@@ -63,13 +63,6 @@
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-active-map (kbd "C-h") nil)
-;; company-tern
-;;(require 'company-tern)
-;;(add-to-list 'company-backends 'company-tern)
-;;(setq tern-command '("tern" "--no-port-file"))
-;;(add-hook 'js2-mode-hook (lambda ()
-;;			   (tern-mode)
-;;			   (company-mode)))
 
 ;; ivy
 (require 'ivy)
@@ -99,60 +92,12 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
-;; jedi
-(require 'jedi-core)
-(setq jedi:complete-on-dot t)
-(setq jedi:use-shortcuts t)
-(add-hook 'python-mode-hook 'jedi:setup)
-(add-to-list 'company-backends 'company-jedi) ; add backend
-
 ;; flycheck
 (require 'flycheck)
 (global-flycheck-mode)
 (define-key global-map (kbd "\C-c n") 'flycheck-next-error)
 (define-key global-map (kbd "\C-c p") 'flycheck-previous-error)
 (define-key global-map (kbd "\C-c d") 'flycheck-list-errors)
-
-;; irony
-(require 'irony)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-(add-to-list 'company-backends 'company-irony) ; backend追加
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" default)))
- '(inhibit-startup-screen t)
- '(package-selected-packages
-   (quote
-    (color-theme-sanityinc-tomorrow helm-gtags ggtags eglot exec-path-from-shell all-the-icons-ivy-rich ivy-rich auto-complete-sage sage-shell-mode web-mode rainbow-delimiters markdown-mode undo-tree projectile spaceline spaceline-all-the-icons all-the-icons-dired all-the-icons-ivy all-the-icons nyan-mode yasnippet multiple-cursors rjsx-mode ace-window wgrep magit dracula-theme company-go go-mode js2-mode company-tern markdown-preview-mode solarized-theme flycheck counsel company-jedi company-irony))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-
-;; js2-mode
-;;(require 'js2-mode)
-;;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
-;; flycheck-mode (go version)
-(add-hook 'go-mode-hook 'flycheck-mode)
-(add-hook 'go-mode-hook (lambda()
-			  (add-hook 'before-save-hook' 'gofmt-before-save)
-			  (local-set-key (kbd "M-.") 'godef-jump)
-			  (setq indent-tabs-mode nil)
-			  (setq c-basic-offset 4)
-			  (setq tab-width 4)
-			  (company-mode)))
 
 ;; eglot
 (require 'eglot)
@@ -171,14 +116,6 @@
 (global-set-key (kbd "M-o") `ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 
-;; rjsx-mode
-;;(add-to-list `auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
-;;(add-hook 'rjsx-mode-hook
-;;	  (lambda ()
-;;	    (setq indent-tabs-mode nil) ;; インデントはタブではなく空白
-;;	    (setq js-indent-level 2) ;; default 4 -> 2
-;;	    ))
-;;
 ;; multiple-cursors
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -188,11 +125,8 @@
 
 ;; yasnippet
 (require 'yasnippet)
-;; 既存スニペットを挿入する
 (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
-;; 新規スニペットを作成するバッファを用意する
 (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
-;; 既存スニペットを閲覧・編集する
 (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
 (yas-global-mode 1)
 
@@ -204,15 +138,7 @@
 (require 'all-the-icons)
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 (add-hook 'after-init-hook 'all-the-icons-ivy-setup)
-
-;; spaceline
-;; (require 'spaceline-config)
-;; (spaceline-all-the-icons-theme)
-
-;; projectile
-(projectile-mode +1)
-(define-key projectile-mode-map (kbd "M-s p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;; TODO: check ivy-rich
 
 ;; undo-tree
 (require 'undo-tree)
@@ -239,6 +165,7 @@
 (add-hook 'emacs-startup-hook 'rainbow-delimiters-using-stronger-colors)
 
 ;; web-mode
+;; TODO: use lsp-mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -248,16 +175,6 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
-;; sagemath
-(setq sage-shell:use-prompt-toolkit nil)
-(add-hook 'sage-shell:sage-mode-hook 'ac-sage-setup)
-(add-hook 'sage-shell-mode-hook 'ac-sage-setup)
-(eval-after-load "auto-complete-sage"
-  '(setq sage-shell:completion-function 'completion-at-point))
-(defun jpk/sage-mode-hook ()
-  (company-mode -1))
-(add-hook 'sage-shell-mode-hook 'jpk/sage-mode-hook)
 
 ;; org
 (require 'org)
@@ -296,39 +213,6 @@
 (add-hook 'org-mode-hook 'emoji-cheat-sheet-plus-display-mode)
 (add-hook 'markdown-mode-hook 'emoji-cheat-sheet-plus-display-mode)
 (add-hook 'magit-mode-hook 'emoji-cheat-sheet-plus-display-mode)
-
-;; helm
-(require 'helm)
-(require 'helm-config)
-(helm-mode 1)
-(global-set-key (kbd "C-c h") 'helm-command-prefix)
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
-(define-key helm-map (kbd "C-z") 'helm-select-action)
-
-(setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
-      helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
-      helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
-      helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
-      helm-ff-file-name-history-use-recentf t
-      helm-echo-input-in-header-line t)
-
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-
-;; javascript indent
-(add-hook 'js-mode-hook
-	  (lambda ()
-	    (make-local-variable 'js-indent-level)
-	    (setq js-indent-level 2)))
-
-;; tex-lsp
-(require 'lsp-latex)
-(with-eval-after-load "tex-mode"
-  (add-hook 'tex-mode-hook 'lsp)
-  (add-hook 'latex-mode-hook 'lsp))
 
 ;; org-mode local TODO lists
 (add-hook 'org-mode-hook 'my-org-mode-stuff)
