@@ -101,7 +101,10 @@
 
 ;; eglot
 (require 'eglot)
+(require 'go-mode)
 (add-hook 'go-mode-hook 'eglot-ensure)
+(add-hook 'sh-mode-hook 'eglot-ensure)
+(add-hook 'python-mode-hook 'eglot-ensure)
 
 ;; magit
 (global-set-key (kbd "C-x g") `magit-status)
@@ -224,5 +227,19 @@
 		   (push ?< unread-command-events)
 		   (call-interactively 'org-agenda)))
   )
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(go-mode lsp-python-ms yasnippet wgrep web-mode undo-tree rainbow-delimiters org nyan-mode multiple-cursors markdown-mode magit flycheck emoji-cheat-sheet-plus eglot counsel company color-theme-sanityinc-tomorrow all-the-icons-ivy-rich all-the-icons-ivy all-the-icons-dired ace-window)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 ;;; init.el ends here
