@@ -39,6 +39,8 @@
 (setq kept-new-versions 5) ;; 最新の保持数
 (setq kept-old-versions 1) ;; 最古の保持数
 (setq delete-old-versions t) ;; 範囲外削除
+(setq auto-save-timeout 10) ;; default 30s
+(setq auto-save-interval 100) ;; default 300type
 
 ;;; lock file(.#*) は作成しない
 (setq create-lockfiles nil)
