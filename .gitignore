@@ -18,3 +18,4 @@ flycheck-init.el
 .lsp-session-*
 flycheck*
 projects
+elpy/
