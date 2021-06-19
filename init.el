@@ -39,14 +39,6 @@
 (when (equal system-type 'windows-nt)
   (load "my_win_setting"))
 
-;; eglot
-;; (require 'eglot)
-;; (require 'go-mode)
-;; (add-hook 'go-mode-hook 'eglot-ensure)
-;; (add-hook 'sh-mode-hook 'eglot-ensure)
-;; (add-hook 'python-mode-hook 'eglot-ensure)
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

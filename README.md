@@ -9,7 +9,6 @@ Emacsの設定ファイル
 - `counsel`
 - `swiper`
 - `flycheck`
-- `eglot`
 - `magit`
 - `wgrep`
 - `ace-window`
@@ -29,17 +28,11 @@ Emacsの設定ファイル
 - `org`
 - `emoji-cheat-sheet-plus`
   - `sudo apt install fonts-symbola`
-- `go-mode`
-- `web-mode`
   
 ## General Setting
 - バックファイルの扱いは[ここ](http://yohshiy.blog.fc2.com/blog-entry-319.html)を参考に記述
 
 ## Programming Languages
-- Python(Pyright)
-- Golang
-- Bash
-- [TODO] C++
-- [TODO] HTML
-- [TODO] CSS/LessCSS/SASS/SCSS
-- [TODO]JavaScript
+- `elpy` (Python)
+- `go-mode`
+- `web-mode`
