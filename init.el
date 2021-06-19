@@ -33,8 +33,11 @@
 (load "my_web")
 (load "my_org")
 (load "my_emoji")
-(load "my_win_setting")
 (load "my_python")
+
+;; windows setting
+(when (equal system-type 'windows-nt)
+  (load "my_win_setting"))
 
 ;; eglot
 ;; (require 'eglot)
