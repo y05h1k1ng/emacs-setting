@@ -38,7 +38,7 @@
 ;; wsl setting
 (when (and (equal system-type 'gnu/linux)
            (string-match-p "microsoft" (shell-command-to-string "uname -r")))
-  (load "my_win_setting"))
+  (load "my_wsl_setting"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
