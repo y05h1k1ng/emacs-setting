@@ -35,8 +35,9 @@
 (load "my_emoji")
 (load "my_python")
 
-;; windows setting
-(when (equal system-type 'windows-nt)
+;; wsl setting
+(when (and (equal system-type 'gnu/linux)
+           (string-match-p "microsoft" (shell-command-to-string "uname -r")))
   (load "my_win_setting"))
 
 (custom-set-variables
