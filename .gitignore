@@ -19,3 +19,4 @@ flycheck-init.el
 flycheck*
 projects
 elpy/
+*.elc
