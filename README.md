@@ -34,5 +34,7 @@ Emacsの設定ファイル
 
 ## Programming Languages
 - `elpy` (Python)
-- `go-mode`
+- `go-mode`, `company-go`, `go-eldoc`
+  - `go get -u github.com/stamblerre/gocode`
+  - `go get -u github.com/rogpeppe/godef`
 - `web-mode`
